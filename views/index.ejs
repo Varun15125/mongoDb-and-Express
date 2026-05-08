@@ -14,14 +14,15 @@
     <br>
     <% for(let chat of chats){ %>
         <div class="chat">
-            <p>from: <%= chat.from %>
+            <p>from: <i> <%= chat.from %></i>
             </p>
             <div class="msg">
                 <p>
                     <%= chat.msg %>
                 </p>
                 <form method="GET" action="/chats/<%= chat._id %>/edit">
-                    <button>Edit</button>        
+                    <button>Edit</button>
+                            
                 </form>
                 <br>
             <form action="/chats/<%= chat._id %>?_method=DELETE" method="POST" onsubmit="return confirm('Delete this chat?')">
@@ -29,7 +30,7 @@
                 <button>Delete</button>
             </form>
             </div>
-            <p>receiver by: <%= chat.to %>
+            <p>receiver by: <i><%= chat.to %></i>
             </p>
             <hr>
             <p><%=chat.created_at.toString().split(" ")[4] %></p>
