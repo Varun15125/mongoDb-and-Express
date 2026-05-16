@@ -4,9 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Whatsapp</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <nav class="navbar bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="data:image/png;base64,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" alt="Logo" width="30" height="24"
+                    class="d-inline-block align-text-top">
+                WeChat
+            </a>
+        </div>
+    </nav>
     <h3>All Chats</h3>
     <form method="GET" action="/chats/new">
         <button id="bt">New Chat</button>
@@ -38,6 +50,9 @@
         </div>
     
         <% } %>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
